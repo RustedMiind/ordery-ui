@@ -29,3 +29,9 @@ $formBG: radial-gradient(
 );
 $fontMain: "Inter", sans-serif;
 $fontLogo: "Italianno", cursive;
+
+.register {
+  .form {
+    background-image: $formBG;
+  }
+}
