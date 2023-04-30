@@ -1,0 +1,65 @@
+.footer {
+  background-color: #ccc;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  align-items: center;
+  .logo {
+    img {
+      width: 240px;
+    }
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.5rem;
+      &:hover {
+        color: var(--active-text-color);
+      }
+    }
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 240px;
+    justify-content: center;
+    .pizza,
+    .burger,
+    .pasta,
+    .donuts {
+      width: 7rem;
+      position: relative;
+      border-radius: 10px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.7;
+        z-index: 2;
+        border-radius: 10px;
+        transition: 0.3s linear;
+      }
+      &:hover::before {
+        opacity: 0;
+      }
+      &:hover {
+        box-shadow: 5px 5px 15px 0 #0000006e, -5px -5px 15px 0 #0000006e;
+      }
+      img {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

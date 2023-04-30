@@ -1,0 +1,50 @@
+@import "../../App.scss";
+img {
+  max-width: 100%;
+}
+
+.app-ref {
+  padding: 5rem;
+  .text {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+    .title-text {
+      text-align: center;
+      font-size: 2.5rem;
+      span {
+        font-family: $fontLogo;
+        text-align: center;
+        font-size: 2.5rem;
+        width: fit-content;
+      }
+    }
+    p {
+      text-align: center;
+      font-size: 1.5rem;
+      text-align: start;
+    }
+  }
+  .icons-app {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 4rem 0;
+    .playstore,
+    .appstore {
+      display: flex;
+      background-color: black;
+      border-radius: 10px;
+      padding: 0.5rem;
+      .icon-app {
+        width: 70px;
+        margin-right: 1rem;
+      }
+      .disc {
+        width: 100%;
+        color: white;
+      }
+    }
+  }
+}

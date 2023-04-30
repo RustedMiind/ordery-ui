@@ -1,4 +1,37 @@
 // Inital Sass File
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap%22");
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+// font-family: 'Inter', sans-serif;
+// font-family: 'Italianno', cursive;
 :root {
-  --color-anything: red;
+  --active-text-color: #0038ff;
+  --item-background: #eee;
+  --button-apply: #fa7474;
+  --button-checkout: #5c51db;
+  --layer-form: #312424;
+}
+
+$buttonApply: var(--button-apply);
+$buttonCheckout: var(--button-checkout);
+$layerForm: var(--layer-form);
+$signInButtonBG: linear-gradient(90.3deg, #420671 0.16%, #ce2913 101.62%);
+$inputColor: radial-gradient(
+  90.16% 143.01% at 15.32% 21.04%,
+  rgba(255, 255, 255, 0.2) 0%,
+  rgba(255, 255, 255, 0.0447917) 77.08%,
+  rgba(255, 255, 255, 0) 100%
+);
+$formBG: radial-gradient(
+  90.16% 143.01% at 15.32% 21.04%,
+  rgba(179, 121, 223, 0.2) 0%,
+  rgba(204, 88, 84, 0.016) 77.08%,
+  rgba(179, 121, 223, 0.2) 100%
+);
+$fontMain: "Inter", sans-serif;
+$fontLogo: "Italianno", cursive;
+
+.register {
+  .form {
+    background-image: $formBG;
+  }
 }
