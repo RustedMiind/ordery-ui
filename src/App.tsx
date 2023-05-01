@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux/es/exports";
 import { checkToken } from "./redux/middlwares/userMiddleware";
 import { addMenuItems, MenuItemType } from "./redux/reducers/menuSlice";
 import Home from "./pages/Home";
+import Register from "./pages/Register";
 
 function App() {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
   );

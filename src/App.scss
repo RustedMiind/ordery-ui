@@ -7,6 +7,7 @@
   --button-apply: #fa7474;
   --button-checkout: #5c51db;
   --layer-form: #312424;
+  --form-font-bg: rgba(21, 19, 22, 0.86);
 }
 
 $activeText: var(--active-text-color);
@@ -30,8 +31,106 @@ $formBG: radial-gradient(
 $fontMain: "Inter", sans-serif;
 $fontLogo: "Italianno", cursive;
 
+html {
+  font-family: $fontMain;
+  background-color: #312424;
+}
+
 .register {
   .form {
+    margin: 4rem;
+    margin-top: 20rem;
+    * {
+      color: rgba(white, 0.7);
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: -18rem;
+      width: 18rem;
+      height: 18rem;
+      background-image: url(./img/Vector.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
+    &.error-popup::after {
+      content: "Please Fill in the fields correctly";
+      position: absolute;
+      right: -18rem;
+      width: 18rem;
+      height: 18rem;
+    }
+    position: relative;
+    border-radius: 2rem;
+    width: 28rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $layerForm;
     background-image: $formBG;
+    input {
+      width: 100%;
+      background-color: transparent;
+      outline: none;
+      padding: 0.6em 1rem;
+      border: 1px solid rgba(128, 128, 128, 0.4);
+      border-radius: 0.4rem;
+      margin-top: 0.6rem;
+      // font-size: 1rem;
+      &.error {
+        outline: 2px solid red;
+      }
+    }
+    p {
+      height: 1rem;
+      margin-top: 0.2rem;
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+    > .inputs-section {
+      margin: 0.3rem 0;
+      display: flex;
+      flex-direction: column;
+      &.name {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        > div {
+          width: 45%;
+        }
+      }
+    }
+    .submit {
+      margin-top: 1rem;
+      button {
+        position: relative;
+        overflow: hidden;
+        background-image: $signInButtonBG;
+        border: none;
+        outline: none;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        padding: 0.8rem 1.6rem;
+        cursor: pointer;
+        &:before {
+          transition: 150ms ease-in-out;
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+        }
+        &:hover:before {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+    .alert {
+      a {
+        color: $buttonApply;
+      }
+    }
   }
 }
