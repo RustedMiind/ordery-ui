@@ -23,7 +23,12 @@ html {
   display: flex;
   flex-direction: column;
   background-color: var(--layer-form);
-  background-image: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(179, 121, 223, 0.2) 0%, rgba(204, 88, 84, 0.016) 77.08%, rgba(179, 121, 223, 0.2) 100%);
+  background-image: radial-gradient(
+    90.16% 143.01% at 15.32% 21.04%,
+    rgba(179, 121, 223, 0.2) 0%,
+    rgba(204, 88, 84, 0.016) 77.08%,
+    rgba(179, 121, 223, 0.2) 100%
+  );
 }
 .register .form * {
   color: rgba(255, 255, 255, 0.7);
@@ -105,4 +110,4 @@ html {
 }
 .register .form .alert a {
   color: var(--button-apply);
-}/*# sourceMappingURL=App.css.map */
+} /*# sourceMappingURL=App.css.map */

@@ -1,0 +1,30 @@
+@import "../../App.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  .navlinks {
+    a {
+      text-decoration: none;
+      color: black;
+      margin: 0 25px;
+      font-size: 20px;
+      &.active {
+        color: var(--active-text-color);
+      }
+      &:hover {
+        color: var(--active-text-color);
+      }
+    }
+  }
+  .icon {
+    svg {
+      font-size: 26px;
+      cursor: pointer;
+      &:hover {
+        color: var(--active-text-color);
+      }
+    }
+  }
+}
