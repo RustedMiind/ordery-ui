@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-// import styleSheet 
-import './style-login.scss'
+// import styleSheet
+import "./style-login.scss";
 export default function LogIn() {
   return (
     <div className="form-login">
@@ -10,16 +10,21 @@ export default function LogIn() {
       <form>
         <label>
           <span>Phone</span>
-        <input type="text" placeholder="+20"/>
+          <input type="text" placeholder="+20" />
         </label>
         <label>
           <span>Password</span>
-        <input type="password" placeholder="password"/>
+          <input type="password" placeholder="password" />
         </label>
         <Link to="/forgot-password">Forgot Password</Link>
         <input type="submit" value="Log-In" />
-        <p className="no-acc">Dont Have An Account? <span><Link to="/Create-user" >Sign-Up</Link></span></p>
+        <p className="no-acc">
+          Dont Have An Account?{" "}
+          <span>
+            <Link to="/Create-user">Sign-Up</Link>
+          </span>
+        </p>
       </form>
     </div>
-  )
+  );
 }

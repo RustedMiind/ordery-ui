@@ -1,4 +1,4 @@
-import RigesterForm from "../components/RigesterForm";
+import RigesterForm from "../components/registerForm/RigesterForm";
 
 function Register() {
   return (

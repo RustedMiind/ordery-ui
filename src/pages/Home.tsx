@@ -1,8 +1,8 @@
 // import component moduls
-import Appref from "../Component/Appref/Appref";
-import Footer from "../Component/Footer/Footer";
-import LogIn from "../Component/Log-In/LogIn";
-import Sliders from "../Component/Sliders/Sliders";
+import Appref from "../components/Appref/Appref";
+import Footer from "../components/Footer/Footer";
+import LogIn from "../components/Log-In/LogIn";
+import Sliders from "../components/Sliders/Sliders";
 
 // import styleSheet
 import "./style-home.scss";
