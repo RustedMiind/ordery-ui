@@ -106,4 +106,14 @@ html {
 }
 .register .form .alert a {
   color: var(--button-apply);
-}/*# sourceMappingURL=App.css.map */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}/*# sourceMappingURL=index.css.map */

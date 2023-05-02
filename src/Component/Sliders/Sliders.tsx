@@ -12,25 +12,28 @@ import { EffectCreative } from "swiper";
 
 export default function Sliders() {
   return (
-    <div className="sliders"> <Swiper
-    grabCursor={true}
-    effect={"creative"}
-    creativeEffect={{
-      prev: {
-        shadow: true,
-        translate: ["-120%", 0, -500],
-      },
-      next: {
-        shadow: true,
-        translate: ["120%", 0, -500],
-      },
-    }}
-    modules={[EffectCreative]}
-    className="mySwiper2"
-  >
-    <SwiperSlide></SwiperSlide>
-    <SwiperSlide></SwiperSlide>
-    <SwiperSlide></SwiperSlide>
-  </Swiper></div>
-  )
+    <div className="sliders">
+      {" "}
+      <Swiper
+        grabCursor={true}
+        effect={"creative"}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: ["-120%", 0, -500],
+          },
+          next: {
+            shadow: true,
+            translate: ["120%", 0, -500],
+          },
+        }}
+        modules={[EffectCreative]}
+        className="mySwiper2"
+      >
+        <SwiperSlide></SwiperSlide>
+        <SwiperSlide></SwiperSlide>
+        <SwiperSlide></SwiperSlide>
+      </Swiper>
+    </div>
+  );
 }

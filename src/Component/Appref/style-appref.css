@@ -106,4 +106,58 @@ html {
 }
 .register .form .alert a {
   color: var(--button-apply);
-}/*# sourceMappingURL=App.css.map */
+}
+
+img {
+  max-width: 100%;
+}
+
+.app-ref {
+  padding: 5rem;
+}
+.app-ref .text {
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.app-ref .text .title-text {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.app-ref .text .title-text span {
+  font-family: "Italianno", cursive;
+  text-align: center;
+  font-size: 2.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.app-ref .text p {
+  text-align: center;
+  font-size: 1.5rem;
+  text-align: start;
+}
+.app-ref .icons-app {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 4rem 0;
+}
+.app-ref .icons-app .playstore,
+.app-ref .icons-app .appstore {
+  display: flex;
+  background-color: black;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+.app-ref .icons-app .playstore .icon-app,
+.app-ref .icons-app .appstore .icon-app {
+  width: 70px;
+  margin-right: 1rem;
+}
+.app-ref .icons-app .playstore .disc,
+.app-ref .icons-app .appstore .disc {
+  width: 100%;
+  color: white;
+}/*# sourceMappingURL=style-appref.css.map */

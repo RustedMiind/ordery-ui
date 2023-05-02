@@ -1,6 +1,7 @@
 import "./App.scss";
 // import axios from "axios";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
+import Navbar from "./Component/Navbar/Navbar";
 // import { useDispatch } from "react-redux/es/exports";
 // import { checkToken } from "./redux/middlwares/userMiddleware";
 // import { addMenuItems, MenuItemType } from "./redux/reducers/menuSlice";
@@ -20,6 +21,22 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar
+        logo={{
+          type: "image",
+          payload:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNU70W7n6HPGwCdB4YdelSxKFzjYeDoNZS_g&usqp=CAU",
+        }}
+        userDropdown={<>DropDown</>}
+        isUser={true}
+        navLinks={
+          <>
+            <NavLink to={"./"}>Home</NavLink>
+            <NavLink to={"./menu"}>Menu</NavLink>
+            <NavLink to={"./cart"}>Cart</NavLink>
+          </>
+        }
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
