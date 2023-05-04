@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./navbar.css";
+import "./navbar.scss";
 
 function Navbar(props: PropsType) {
   const [dropdown, setDropdown] = useState<"user" | "menu" | "">("");
@@ -33,6 +33,9 @@ function Navbar(props: PropsType) {
         <div className="links-container">
           <div
             className={`links ${dropdown === "menu" ? "" : "mobile-hidden"}`}
+            onClick={() => {
+              setDropdown("");
+            }}
           >
             {props.navLinks}
           </div>

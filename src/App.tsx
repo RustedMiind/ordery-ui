@@ -34,7 +34,7 @@ function App() {
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNU70W7n6HPGwCdB4YdelSxKFzjYeDoNZS_g&usqp=CAU",
         }}
         userDropdown={<>DropDown</>}
-        isUser={false}
+        isUser={true}
         navLinks={
           <>
             <NavLink to={"./"}>Home</NavLink>

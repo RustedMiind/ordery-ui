@@ -9,6 +9,10 @@
   --form-font-bg: rgba(21, 19, 22, 0.86);
 }
 
+* {
+  outline: 1px solid #ff000059;
+}
+
 html {
   font-family: "Inter", sans-serif;
   background-color: #312424;
@@ -24,7 +28,12 @@ html {
   display: flex;
   flex-direction: column;
   background-color: var(--layer-form);
-  background-image: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(179, 121, 223, 0.2) 0%, rgba(204, 88, 84, 0.016) 77.08%, rgba(179, 121, 223, 0.2) 100%);
+  background-image: radial-gradient(
+    90.16% 143.01% at 15.32% 21.04%,
+    rgba(179, 121, 223, 0.2) 0%,
+    rgba(204, 88, 84, 0.016) 77.08%,
+    rgba(179, 121, 223, 0.2) 100%
+  );
 }
 .register .form * {
   color: rgba(255, 255, 255, 0.7);
@@ -116,4 +125,4 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */

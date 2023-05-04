@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+* {
+  outline: 1px solid #ff000059;
+}
+
 body {
   font-family: $fontMain;
 }
