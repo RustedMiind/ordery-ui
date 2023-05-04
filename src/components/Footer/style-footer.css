@@ -1,3 +1,12 @@
+:root {
+  --active-text-color: #0038ff;
+  --item-background: #eee;
+  --button-apply: #fa7474;
+  --button-checkout: #5c51db;
+  --layer-form: #312424;
+  --form-font-bg: rgba(21, 19, 22, 0.86);
+}
+
 .footer {
   background-color: #ccc;
   display: flex;

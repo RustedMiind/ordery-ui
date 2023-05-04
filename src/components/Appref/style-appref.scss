@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@use "../../scss/variables.scss" as *;
 img {
   max-width: 100%;
 }

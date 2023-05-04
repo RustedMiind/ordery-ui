@@ -5,14 +5,4 @@
   --button-checkout: #5c51db;
   --layer-form: #312424;
   --form-font-bg: rgba(21, 19, 22, 0.86);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=variables.css.map */

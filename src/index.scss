@@ -1,11 +1,11 @@
-@import "./App.scss";
+@use "./scss/variables.scss" as *;
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 * {
-  outline: 1px solid #ff000059;
+  // outline: 1px solid #ff000059;
 }
 
 body {

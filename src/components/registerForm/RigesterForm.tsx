@@ -1,13 +1,23 @@
 import { useReducer, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./register.css";
 import InputSection from "./InputSection";
+import { UserType } from "../../redux/reducers/userSlice";
+import {
+  FormObjectType,
+  requestSignup,
+} from "../../redux/middlwares/userMiddleware";
+import { useDispatch } from "react-redux";
 
 function RigesterForm() {
+  const navigate = useNavigate();
   const initialState: FormObjectType = {
     fName: "",
     lName: "",
     phone: "",
+    address: "",
+    city: "",
     password: "",
     passwordConfirm: "",
   };
@@ -15,12 +25,15 @@ function RigesterForm() {
     fName: true,
     lName: true,
     phone: true,
+    address: true,
+    city: true,
     password: true,
     passwordConfirm: true,
   };
   const [errors, setErrors] = useState(initialErrors);
   const [errorMessage, setErrorMessage] = useState(false);
   const [form, dispatch] = useReducer(HandleForm, initialState);
+  const reduxDistpatch = useDispatch();
   const formHandler = (
     e: React.ChangeEvent<HTMLInputElement>,
     action: FormReducerActionTypeType
@@ -41,7 +54,11 @@ function RigesterForm() {
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    checkErrors();
+    if (checkErrors()) {
+      console.log("Please Fill in the form Correctly");
+    } else {
+      requestSignup(form, reduxDistpatch);
+    }
   };
   return (
     <form
@@ -69,6 +86,26 @@ function RigesterForm() {
           value={form.phone}
           actionType="PHONE"
           label="Phone"
+          handler={formHandler}
+          handleError={handleErrors}
+        />
+      </div>
+      <div className="inputs-section address">
+        <InputSection
+          value={form.address}
+          type="text"
+          actionType="ADDRESS"
+          label="Address"
+          handler={formHandler}
+          handleError={handleErrors}
+        />
+      </div>
+      <div className="inputs-section city">
+        <InputSection
+          value={form.city}
+          type="text"
+          actionType="CITY"
+          label="City"
           handler={formHandler}
           handleError={handleErrors}
         />
@@ -117,6 +154,10 @@ function HandleForm(
       return { ...state, lName: action.payload };
     case "PASSWORD":
       return { ...state, password: action.payload };
+    case "ADDRESS":
+      return { ...state, address: action.payload };
+    case "CITY":
+      return { ...state, city: action.payload };
     case "PASSWORD_CONFIRM":
       return { ...state, passwordConfirm: action.payload };
     case "PHONE":
@@ -132,18 +173,12 @@ function HandleForm(
       return state;
   }
 }
-
-type FormObjectType = {
-  fName: string;
-  lName: string;
-  phone: string;
-  password: string;
-  passwordConfirm: string;
-};
 export type OptionalFormObjectType = {
   fName?: boolean;
   lName?: boolean;
   phone?: boolean;
+  address?: boolean;
+  city?: boolean;
   password?: boolean;
   passwordConfirm?: boolean;
 };
@@ -153,6 +188,8 @@ export type FormReducerActionTypeType =
   | "LAST_NAME"
   | "PHONE"
   | "PASSWORD"
+  | "ADDRESS"
+  | "CITY"
   | "PASSWORD_CONFIRM";
 
 export interface FormActionType {

@@ -48,6 +48,24 @@ function InputSection(props: PropsType) {
           props.handleError({ passwordConfirm: false });
         }
         break;
+      case "ADDRESS":
+        if (props.value && props.value.length < 6) {
+          setError("Enter A correct Adress");
+          props.handleError({ address: true });
+        } else {
+          setError("");
+          props.handleError({ address: false });
+        }
+        break;
+      case "CITY":
+        if (props.value && props.value.length < 3) {
+          setError("Enter A correct city");
+          props.handleError({ city: true });
+        } else {
+          setError("");
+          props.handleError({ city: false });
+        }
+        break;
       case "PHONE":
         console.log(
           !!props.value.length,

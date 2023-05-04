@@ -5,6 +5,25 @@ import {
   setUserLoggedIn,
   setUserLoggedOut,
 } from "../reducers/userSlice";
+
+export function requestSignup(
+  form: FormObjectType,
+  dispatch: Dispatch<AnyAction>
+) {
+  return new Promise((resolve, reject) => {
+    axios
+      .post<UserType>("/api/user/new", form)
+      .then((res) => {
+        dispatch(setUserLoggedIn({ userData: res.data }));
+        resolve(res.data);
+      })
+      .catch((err) => {
+        dispatch(setUserLoggedOut());
+        reject(err);
+      });
+  });
+}
+
 export function checkToken(dispatch: Dispatch<AnyAction>) {
   axios
     .get("/api/checkuser")
@@ -69,3 +88,13 @@ export type LoginErrorType =
   | "Password is incorrect";
 
 export type LoginFormType = { phone: string; password: string };
+
+export type FormObjectType = {
+  fName: string;
+  lName: string;
+  phone: string;
+  address: string;
+  city: string;
+  password: string;
+  passwordConfirm: string;
+};

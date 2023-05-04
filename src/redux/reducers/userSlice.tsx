@@ -14,8 +14,8 @@ export const menuSlice = createSlice({
   reducers: {
     setUserLoggedIn: (state, { payload }) => {
       state.user = {
-        fName: payload.userData.fName,
         lName: payload.userData.lName,
+        fName: payload.userData.fName,
         _id: payload.userData._id,
         address: payload.userData.address,
         city: payload.userData.city,
